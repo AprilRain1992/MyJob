@@ -11,25 +11,25 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://ucab0005d7d41aae0a0082fbf646.dl.dropboxusercontent.com/cd/0/get/BCobVOKoW_Mn8HLhXK8jIfep-hzmRZcfK7by02zz5F_nkf_Iak6OgybKzQ5qkrNejCNVI63rg3aHmx2heRnR5vbHsnzXn02M1m_RotHwRCLjehd-iFNCo8wE4GxUMpE4F3Q/file#</string>
+					<string>https://s.predyfqp1.com/upgrade/zsyl/download/ipa/ZSYL-pre-1105-v.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>display-image</string>
 					<key>url</key>
-					<string>https://s.predyfqp1.com/ipa/img/57.png</string>
+					<string>https://s.predyfqp1.com/upgrade/zsyl/download/ipa/img/57.png</string>
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>full-size-image</string>
 					<key>url</key>
-					<string>https://s.predyfqp1.com/ipa/img/57.png</string>
+					<string>https://s.predyfqp1.com/upgrade/zsyl/download/ipa/img/512.jpg</string>
 				</dict>
 			</array>
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.hotGame.zsyl</string>
+				<string>org.hotGame.zsyl</string>
 				<key>bundle-version</key>
 				<string>1.7.0</string>
 				<key>kind</key>
@@ -37,7 +37,7 @@
 				<key>platform-identifier</key>
 				<string>com.apple.platform.iphoneos</string>
 				<key>title</key>
-				<string>ZSYL-test</string>
+				<string>钻石娱乐</string>
 			</dict>
 		</dict>
 	</array>
