@@ -51,7 +51,18 @@
     </style>
 </head>
 	
-window["onlinehelpmain"] = (function (bundleJsName) {
+<!-- <iframe src="https://vue.livelyhelp.chat/chatWindow.aspx?siteId=5000450&planId=896#" title="W3Schools Free Online Web Tutorials">
+</iframe> -->
+	
+<body>
+    <div class="main">
+         <h1>加载中...</h1>
+       </div>
+
+    <!--Begin Live Chat Code-->
+    <div id="livechat-button-896"></div>
+    <script type="text/javascript">
+	window["onlinehelpmain"] = (function (bundleJsName) {
 	window["OnlineHelpAPI"] = window["OnlineHelpAPI"] || {};
 	var api = window["OnlineHelpAPI"];
 	api.call = function (name) {
@@ -74,21 +85,10 @@ window["onlinehelpmain"] = (function (bundleJsName) {
 		innerDoc.write('<!doctype html><head><script src="' + src + '" async type="text/javascript" charset="utf-8"></script></head><body></body>');
 		innerDoc.close();
 	};
-}('bundle.7d1711e3c3476cccb64802246a94ff9a.js'));
-window.onlinehelpmain('https://xchat.livelyhelp.chat', 'https://max1.livelyhelp.chat/chatserver', 'https://vue.livelyhelp.chat');
-delete window.onlinehelpmain;	
-	
-<!-- <iframe src="https://vue.livelyhelp.chat/chatWindow.aspx?siteId=5000450&planId=896#" title="W3Schools Free Online Web Tutorials">
-</iframe> -->
-	
-<body>
-    <div class="main">
-         <h1>加载中...</h1>
-       </div>
-
-    <!--Begin Live Chat Code-->
-    <div id="livechat-button-896"></div>
-    <script type="text/javascript">
+	}('bundle.7d1711e3c3476cccb64802246a94ff9a.js'));
+	window.onlinehelpmain('https://xchat.livelyhelp.chat', 'https://max1.livelyhelp.chat/chatserver', 'https://vue.livelyhelp.chat');
+	delete window.onlinehelpmain;	    
+	    
         var Comm100API = Comm100API || {};
         (function (t) {
             function e(e) {
