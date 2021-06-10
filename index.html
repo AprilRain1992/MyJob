@@ -51,8 +51,35 @@
     </style>
 </head>
 	
-<iframe src="https://vue.livelyhelp.chat/chatWindow.aspx?siteId=5000450&planId=896#" title="W3Schools Free Online Web Tutorials">
-</iframe>
+window["onlinehelpmain"] = (function (bundleJsName) {
+	window["OnlineHelpAPI"] = window["OnlineHelpAPI"] || {};
+	var api = window["OnlineHelpAPI"];
+	api.call = function (name) {
+		return (new Function('return ' + name)).call();
+	};
+	api.chat_buttons = api.chat_buttons || [];
+	return function (main, standby, vue) {
+		api.main = main;
+        api.standby = standby;
+        api.vue = vue;
+		var src = vue + '/js/' + bundleJsName;
+
+		var iframe = document.createElement('iframe');
+		iframe.style.display = 'none';
+		iframe.id = "onlinehelp-iframe";
+    	iframe.title = 'onlinehelp-iframe';
+		document.body.appendChild(iframe);
+		var innerDoc = iframe.contentDocument;
+		innerDoc.open();
+		innerDoc.write('<!doctype html><head><script src="' + src + '" async type="text/javascript" charset="utf-8"></script></head><body></body>');
+		innerDoc.close();
+	};
+}('bundle.7d1711e3c3476cccb64802246a94ff9a.js'));
+window.onlinehelpmain('https://xchat.livelyhelp.chat', 'https://max1.livelyhelp.chat/chatserver', 'https://vue.livelyhelp.chat');
+delete window.onlinehelpmain;	
+	
+<!-- <iframe src="https://vue.livelyhelp.chat/chatWindow.aspx?siteId=5000450&planId=896#" title="W3Schools Free Online Web Tutorials">
+</iframe> -->
 	
 <body>
     <div class="main">
