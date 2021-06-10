@@ -69,7 +69,7 @@
     <script type="text/javascript">
         console.log("navigator.userAgent",navigator.userAgent);
         var Comm100API = Comm100API || {};
-        (function (t) {
+        (function A (t) {
             function e(e) {
                 var a = document.createElement("script"), c = document.getElementsByTagName("script")[0];               
                 a.type = "text/javascript", a.async = !0, a.src = e + t.site_id, c.parentNode.insertBefore(a, c)
@@ -84,6 +84,7 @@
             }, 5e3)
         })(Comm100API || {})
 	var fe = document.createElement("div"); fe.className = "loadingContainer", fe.id = "windowLoading", fe.innerHTML = '<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAIAAAD9b0jDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGNSURBVEhL3ZQ9b8IwEED7/39Ll2xV18DCUpYMUaUqAykSEAhfAQINffJdUuOEhEowtG+yz8rz3dnx0/kB/DNpkiQfBgYaaqVbul6v3y2Y6sJ1GqTH43G1Wi2XyzzPmU4mE/UZmBI8nU7T6fRa4q4U43g8/iw5HA5pmqrPwJTNgiB4M4RhqF9auFJyVJ9hsVgQZBsxMpCpGIV6vq6UqtVnmM/nEic76QYQV5+BPki8wpXypeiE3W6nCxYEh8OhGOkD/dWFkoaDoo9UTY6NRoEltqQPVfo2F9L9fr/dbvmgKAoNdcHecRw79+xHmmUZDRU2m41GW4miyC+RqyaolNTUV8LdkqUW+v2+Kn2fLmv0sVK4f/nC/Q+qAuOXoUXN6mg0QqfzS1xpZRQavcR7vd6LYTAYaNSiQwq6YEGOYhRms5kulNwk5UBeDQyYUrX6DN0PSr18DuHZQs6EqsVo36SK5oOqYMoPrj6DvH5A1bc+0nV4MjzPEyODxhfEoVsKZES9cC01h5ukv+WvSM/nb8PU26GftGrkAAAAAElFTkSuQmCC" />', window.document.body.appendChild(fe);
+	window.OnlineHelpAPI = A({});
 	console.log("window.OnlineHelpAPI",window.OnlineHelpAPI);
 	    
         Comm100API.onReady = function () {
