@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL" />
+
+    <!-- IOS启用 WebApp 全屏模式 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- 状态栏 -->
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <meta name="browsermode" content="application" />
+    <meta name="x5-page-mode" content="app" />
+
+    <style>
+        * {
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            -ms-touch-action: none;
+            background: #ffffff;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+        }
+        .main{
+	  text-align: center; /*让div内部文字居中*/
+	  background-color: #fff;
+	  border-radius: 20px;
+	  width: 300px;
+	  height: 350px;
+	  margin: auto;
+	  position: absolute;
+	  top: 200px;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+        } 
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+         <h1>加载中...</h1>
+       </div>
+
+    <!--Begin Live Chat Code-->
+    <div id="livechat-button-896"></div>
+    <script type="text/javascript">
+        var Comm100API = Comm100API || {};
+        (function (t) {
+            function e(e) {
+                var a = document.createElement("script"), c = document.getElementsByTagName("script")[0];               
+                a.type = "text/javascript", a.async = !0, a.src = e + t.site_id, c.parentNode.insertBefore(a, c)
+            }
+
+            t.chat_buttons = t.chat_buttons || [], t.chat_buttons.push({
+                code_plan: 896,
+                div_id: "livechat-button-896"
+            }), t.site_id = 5000450, t.main_code_plan = 896, e("https://vue.livelyhelp.chat/livechat.ashx?siteId="), setTimeout(function () {
+	      console.log("t.loaded1",t.loaded);	
+                t.loaded || e("https://vue.livelyhelp.chat/livechat.ashx?siteId=")
+            }, 5e3)
+        })(Comm100API || {})
+
+        Comm100API.onReady = function () {
+            console.log("Comm100API.onReady");
+            var params = {}
+            var url = location.search;
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                var strs = str.split("&");
+                strs.forEach(function (param) {
+                    var k = param.split("=")[0];
+                    var v = param.split("=")[1];
+                    params[k] = decodeURIComponent(v);
+                })
+            }
+
+            function getParamByKey(k) {
+                return params[k];
+            }
+
+            // // use API here safely
+            const campaignId = 896
+            const fields = Comm100API.get('livechat.prechat.fields', campaignId);
+            var b = false;
+            const visitor = getParamByKey("name");
+            fields.forEach(ele => {
+                if (ele.type == "name") {
+                    ele.value = visitor;
+                    b = true;
+                }
+            });
+
+            if (!b) {
+                var n = {
+                    isErrorShowed: false,
+                    isFocused: false,
+                    id: 22118,
+                    type: "name",
+                    label: "姓名",
+                    value: visitor,
+                    isRequired: false,
+                    error: ""
+                }
+                fields.push(n)
+            }
+            const isPrechatSkipped = true;
+            Comm100API.set('livechat.prechat.isSkip', isPrechatSkipped);
+            Comm100API.set('livechat.prechat.fields', fields, campaignId);
+            Comm100API.do('livechat.button.click', campaignId);
+            
+        };
+
+        function click_handle() {
+            //window.open("http://10.1.101.12:8081/embed-html/index-cs.html?name=0", "_blank");
+            //loadComm(Comm100API || {});
+            //location.reload();
+        };
+
+        function messageCallback(event){
+            var data = event.data;
+            console.log("comm100data",data,data.indexOf("onCommonLoad"));
+            if(data.indexOf("onCommonLoad") >= 0){
+               var commIframe = document.getElementById("chat_window_container");
+               if(!commIframe){
+                 location.reload();
+               }
+               console.log("comm100Loader2",document.getElementById("chat_window_container"));
+            }
+        };
+
+        //window.addEventListener("message", messageCallback, false);
+        
+        document.addEventListener('readystatechange', event => {
+        if (event.target.readyState === 'interactive') {
+           //console.log("html interactive");
+        }
+        else if (event.target.readyState === 'complete') {
+           //console.log("html complete");
+        }
+        });
+ 
+    </script>
+    <!--End Live Chat Code-->
+
+</body>
+
+</html>
