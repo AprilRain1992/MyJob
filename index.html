@@ -22,7 +22,7 @@
   var OnlineHelpAPI=OnlineHelpAPI||{};(function(t){function e(e){var a=document.createElement("script"),c=document.getElementsByTagName("script")[0];a.type="text/javascript",a.async=!0,a.src=e+t.site_id,c.parentNode.insertBefore(a,c)}t.chat_buttons=t.chat_buttons||[],t.chat_buttons.push({code_plan:"80030000-0000-0000-0000-008e004c4d02",div_id:"onlinehelp-button-80030000-0000-0000-0000-008e004c4d02"}),t.site_id=5000450,t.main_code_plan="80030000-0000-0000-0000-008e004c4d02",e("https://vue.livelyhelp.chat/livechat.ashx?siteId="),setTimeout(function(){t.loaded||e("https://vue1.livelyhelp.chat/livechat.ashx?siteId=")},5e3)})(OnlineHelpAPI||{})
   
 OnlineHelpAPI.onReady = function () {
-            console.log("Comm100API.onReady",OnlineHelpAPI);
+            console.log("OnlineHelpAPI.onReady",OnlineHelpAPI);
             var params = {}
             var url = location.search;
             if (url.indexOf("?") != -1) {
@@ -41,7 +41,7 @@ OnlineHelpAPI.onReady = function () {
 
             // // use API here safely
             const campaignId = 896
-            const fields = Comm100API.get('livechat.prechat.fields', campaignId);
+            const fields = OnlineHelpAPI.get('livechat.prechat.fields', campaignId);
             var b = false;
             const visitor = getParamByKey("name");
             fields.forEach(ele => {
