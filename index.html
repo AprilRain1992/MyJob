@@ -29,10 +29,14 @@
             t.chat_buttons = t.chat_buttons || [], t.chat_buttons.push({
                 code_plan: 896,
                 div_id: "livechat-button-896"
-            }), t.site_id = 5000450, t.main_code_plan = 896, e("https://vue.livelyhelp.chat/livechat.ashx?siteId="), setTimeout(function () {
+            }),
+            t.site_id = 5000450, 
+            t.main_code_plan = 896, 
+	    e("https://vue.livelyhelp.chat/livechat.ashx?siteId="),
+            setTimeout(function () {
 	      console.log("t=====",t,"t.loaded1",t.loaded,);	
                 t.loaded || e("https://vue1.livelyhelp.chat/livechat.ashx?siteId=")
-            }, e3)
+            }, 5e3)}
     })(Comm100API || {})
       
     console.log("OnlineHelpAPI",window["OnlineHelpAPI"]);
