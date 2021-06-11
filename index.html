@@ -40,7 +40,8 @@
     })(Comm100API || {})
       
     console.log("OnlineHelpAPI",window["OnlineHelpAPI"]);
-    Comm100API = window["OnlineHelpAPI"];
+    console.log("window.document",window.document);	    
+    //Comm100API = window["OnlineHelpAPI"];
     Comm100API.onReady = function () {
             console.log("Comm100API.onReady");
             var params = {}
