@@ -80,13 +80,11 @@
             t.chat_buttons = t.chat_buttons || [], t.chat_buttons.push({
                 code_plan: 896,
                 div_id: "livechat-button-896"
-            }), t.site_id = 5000450, t.main_code_plan = 896, e("https://vue.livelyhelp.chat/livechat.ashx?siteId="), setTimeout(function () {
-	      console.log("t.loaded1",t);	
-                t.loaded || e("https://vue.livelyhelp.chat/livechat.ashx?siteId=")
-            }, 5e3)
+            }), t.site_id = 5000450, t.main_code_plan = 896, e("https://vue.livelyhelp.chat/livechat.ashx?siteId="), 		 
         }
-	//window.OnlineHelpAPI = getComm({});
-	window.location.href = "https://vue.livelyhelp.chat/chatWindow.aspx?siteId=5000450&planId=896#";    
+	    
+	window.OnlineHelpAPI = getComm({});
+	//window.location.href = "https://vue.livelyhelp.chat/chatWindow.aspx?siteId=5000450&planId=896#";    
 	console.log("window.OnlineHelpAPI",window.OnlineHelpAPI);
 	    
         Comm100API.onReady = function () {
