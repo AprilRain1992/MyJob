@@ -77,10 +77,14 @@
 		console.log("window.OnlineHelpAPI1",window["OnlineHelpAPI"]);
             }
 
-            t.chat_buttons = t.chat_buttons || [], t.chat_buttons.push({
+            t.chat_buttons = t.chat_buttons || [], 
+	    t.chat_buttons.push({
                 code_plan: 896,
                 div_id: "livechat-button-896"
-            }), t.site_id = 5000450, t.main_code_plan = 896, e("https://vue.livelyhelp.chat/livechat.ashx?siteId="), 		 
+            }), 
+            t.site_id = 5000450, 
+            t.main_code_plan = 896, 
+            e("https://vue.livelyhelp.chat/livechat.ashx?siteId=");		 
         }
 	    
 	window.OnlineHelpAPI = getComm({});
