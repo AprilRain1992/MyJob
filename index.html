@@ -18,32 +18,11 @@
 </head>
 
 <body>
-    <script>
-    var Comm100API = Comm100API || {};
-        (function (t) {
-            function e(e) {
-                var a = document.createElement("script"), c = document.getElementsByTagName("script")[0];               
-                a.type = "text/javascript", a.async = !0, a.src = e + t.site_id, c.parentNode.insertBefore(a, c)
-            }
-
-            t.chat_buttons = t.chat_buttons || [], t.chat_buttons.push({
-                code_plan: 896,
-                div_id: "livechat-button-896"
-            }),
-            t.site_id = 5000450, 
-            t.main_code_plan = 896, 
-	    e("https://vue.livelyhelp.chat/livechat.ashx?siteId="),
-            setTimeout(function () {
-	      console.log("t=====",t,"t.loaded1",t.loaded,);	
-                t.loaded || e("https://vue1.livelyhelp.chat/livechat.ashx?siteId=")
-            }, 5e3)
-    })(Comm100API || {})
-      
-    console.log("OnlineHelpAPI",window["OnlineHelpAPI"]);
-    console.log("window.document",window.document);	    
-    //Comm100API = window["OnlineHelpAPI"];
-    Comm100API.onReady = function () {
-            console.log("Comm100API.onReady");
+<script type="text/javascript">
+  var OnlineHelpAPI=OnlineHelpAPI||{};(function(t){function e(e){var a=document.createElement("script"),c=document.getElementsByTagName("script")[0];a.type="text/javascript",a.async=!0,a.src=e+t.site_id,c.parentNode.insertBefore(a,c)}t.chat_buttons=t.chat_buttons||[],t.chat_buttons.push({code_plan:"80030000-0000-0000-0000-008e004c4d02",div_id:"onlinehelp-button-80030000-0000-0000-0000-008e004c4d02"}),t.site_id=5000450,t.main_code_plan="80030000-0000-0000-0000-008e004c4d02",e("https://vue.livelyhelp.chat/livechat.ashx?siteId="),setTimeout(function(){t.loaded||e("https://vue1.livelyhelp.chat/livechat.ashx?siteId=")},5e3)})(OnlineHelpAPI||{})
+  
+OnlineHelpAPI.onReady = function () {
+            console.log("Comm100API.onReady",OnlineHelpAPI);
             var params = {}
             var url = location.search;
             if (url.indexOf("?") != -1) {
@@ -86,13 +65,12 @@
                 fields.push(n)
             }
             const isPrechatSkipped = true;
-            Comm100API.set('livechat.prechat.isSkip', isPrechatSkipped);
-            Comm100API.set('livechat.prechat.fields', fields, campaignId);
-            Comm100API.do('livechat.button.click', campaignId);  
-        };
-    
-    
-    </script>
+            OnlineHelpAPI.set('livechat.prechat.isSkip', isPrechatSkipped);
+            OnlineHelpAPI.set('livechat.prechat.fields', fields, campaignId);
+            OnlineHelpAPI.do('livechat.button.click', campaignId);
+            
+        };  
+</script>
 
 
 </body>
