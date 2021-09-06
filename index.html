@@ -19,57 +19,59 @@
 
 <body>
 <script type="text/javascript">
-  var OnlineHelpAPI=OnlineHelpAPI||{};(function(t){function e(e){var a=document.createElement("script"),c=document.getElementsByTagName("script")[0];a.type="text/javascript",a.async=!0,a.src=e+t.site_id,c.parentNode.insertBefore(a,c)}t.chat_buttons=t.chat_buttons||[],t.chat_buttons.push({code_plan:"80030000-0000-0000-0000-008e004c4d02",div_id:"onlinehelp-button-80030000-0000-0000-0000-008e004c4d02"}),t.site_id=5000450,t.main_code_plan="80030000-0000-0000-0000-008e004c4d02",e("https://vue.livelyhelp.chat/livechat.ashx?siteId="),setTimeout(function(){t.loaded||e("https://vue1.livelyhelp.chat/livechat.ashx?siteId=")},5e3)})(OnlineHelpAPI||{})
+  console.log('test123456',window.$APIAPP);
+
+//   var OnlineHelpAPI=OnlineHelpAPI||{};(function(t){function e(e){var a=document.createElement("script"),c=document.getElementsByTagName("script")[0];a.type="text/javascript",a.async=!0,a.src=e+t.site_id,c.parentNode.insertBefore(a,c)}t.chat_buttons=t.chat_buttons||[],t.chat_buttons.push({code_plan:"80030000-0000-0000-0000-008e004c4d02",div_id:"onlinehelp-button-80030000-0000-0000-0000-008e004c4d02"}),t.site_id=5000450,t.main_code_plan="80030000-0000-0000-0000-008e004c4d02",e("https://vue.livelyhelp.chat/livechat.ashx?siteId="),setTimeout(function(){t.loaded||e("https://vue1.livelyhelp.chat/livechat.ashx?siteId=")},5e3)})(OnlineHelpAPI||{})
   
-OnlineHelpAPI.onReady = function () {
-            console.log("OnlineHelpAPI.onReady",OnlineHelpAPI);
-            var params = {}
-            var url = location.search;
-            if (url.indexOf("?") != -1) {
-                var str = url.substr(1);
-                var strs = str.split("&");
-                strs.forEach(function (param) {
-                    var k = param.split("=")[0];
-                    var v = param.split("=")[1];
-                    params[k] = decodeURIComponent(v);
-                })
-            }
+// OnlineHelpAPI.onReady = function () {
+//             console.log("OnlineHelpAPI.onReady",OnlineHelpAPI);
+//             var params = {}
+//             var url = location.search;
+//             if (url.indexOf("?") != -1) {
+//                 var str = url.substr(1);
+//                 var strs = str.split("&");
+//                 strs.forEach(function (param) {
+//                     var k = param.split("=")[0];
+//                     var v = param.split("=")[1];
+//                     params[k] = decodeURIComponent(v);
+//                 })
+//             }
 
-            function getParamByKey(k) {
-                return params[k];
-            }
+//             function getParamByKey(k) {
+//                 return params[k];
+//             }
 
-            // // use API here safely
-            const campaignId = "80030000-0000-0000-0000-008e004c4d02";
-            const fields = OnlineHelpAPI.get('livechat.prechat.fields', campaignId);
-            var b = false;
-            const visitor = getParamByKey("name");
-            fields.forEach(ele => {
-                if (ele.type == "name") {
-                    ele.value = visitor;
-                    b = true;
-                }
-            });
+//             // // use API here safely
+//             const campaignId = "80030000-0000-0000-0000-008e004c4d02";
+//             const fields = OnlineHelpAPI.get('livechat.prechat.fields', campaignId);
+//             var b = false;
+//             const visitor = getParamByKey("name");
+//             fields.forEach(ele => {
+//                 if (ele.type == "name") {
+//                     ele.value = visitor;
+//                     b = true;
+//                 }
+//             });
 
-            if (!b) {
-                var n = {
-                    isErrorShowed: false,
-                    isFocused: false,
-                    id: 22118,
-                    type: "name",
-                    label: "姓名",
-                    value: visitor,
-                    isRequired: false,
-                    error: ""
-                }
-                fields.push(n)
-            }
-            const isPrechatSkipped = true;
-            OnlineHelpAPI.set('livechat.prechat.isSkip', isPrechatSkipped);
-            OnlineHelpAPI.set('livechat.prechat.fields', fields, campaignId);
-            OnlineHelpAPI.do('livechat.button.click', campaignId);
+//             if (!b) {
+//                 var n = {
+//                     isErrorShowed: false,
+//                     isFocused: false,
+//                     id: 22118,
+//                     type: "name",
+//                     label: "姓名",
+//                     value: visitor,
+//                     isRequired: false,
+//                     error: ""
+//                 }
+//                 fields.push(n)
+//             }
+//             const isPrechatSkipped = true;
+//             OnlineHelpAPI.set('livechat.prechat.isSkip', isPrechatSkipped);
+//             OnlineHelpAPI.set('livechat.prechat.fields', fields, campaignId);
+//             OnlineHelpAPI.do('livechat.button.click', campaignId);
             
-        };  
+//         };  
 </script>
 
 
